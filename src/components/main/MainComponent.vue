@@ -25,16 +25,14 @@ export default {
 .main {
   background-image: url("../../../src/assets/main-img.jpeg");
   background-repeat: no-repeat;
-  background-size: 45%;
+  background-size: 40%;
   background-position-x: 100%;
   &__wrapper {
     display: flex;
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
+    @include wrapper;
   }
   &__benefit {
-    width: 57%;
+    width: 68%;
   }
   &__calculate-form {
     width: 43%;

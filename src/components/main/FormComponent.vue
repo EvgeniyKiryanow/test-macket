@@ -98,10 +98,10 @@ export default {
   computed: {
     finalValue() {
       return Math.floor(
-        this.selected / 1000 +
-          this.culture / 1000 +
-          this.cost / 1000 +
-          this.square / 1000
+        this.selected / 10 +
+          this.culture / 10 +
+          this.cost / 10 +
+          this.square / 10
       );
     },
   },
@@ -113,73 +113,66 @@ export default {
   position: absolute;
   top: -40%;
   left: 20%;
-  background: #e9e5e4;
+  background: $form-b;
   padding: 10px;
   &__panel {
     border-radius: 5px;
     padding: 10px 20px;
-    border: 1px dashed #a7a9ac;
-    background: #f3efee;
+    border: 1px dashed $form-border;
+    background: $form;
     display: flex;
     flex-direction: column;
     h3 {
-      color: #25383f;
-      font-family: "Roboto Condensed", sans-serif;
-      font-weight: 600;
-      font-size: 36px;
-      text-transform: uppercase;
+      color: $dark-blue;
+      @include fontBold;
+      font-size: $fs-form;
       word-wrap: break-word;
       text-align: center;
       margin: 15px 0;
-      p {
-        margin: 0;
-        padding: 0;
-      }
     }
     &-efficiently {
       text-align: center;
-      font-size: 18px;
+      font-size: 1.8em;
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 100;
       margin: 0;
     }
     hr {
-      background: #e9e5e4;
+      background: $form-b;
       width: 60%;
       margin: 15px auto;
     }
     label {
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 100;
-      font-size: 14px;
+      font-size: $fs-s;
       padding: 5px 0;
     }
     input,
     select {
-      border: 1px solid #e9e5e4;
+      border: 1px solid $form-b;
       padding: 6px;
       margin-bottom: 15px;
       border-radius: 4px;
     }
     &-profit {
       text-align: center;
-      color: #d26441;
-      font-size: 20px;
+      color: $red-f;
+      font-size: 2em;
       margin: 0;
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 400;
     }
     &-cost {
-      font-family: "Roboto Condensed", sans-serif;
-      font-weight: 600;
-      font-size: 50px;
+     @include fontBold;
+      font-size: $fs-b;
       text-align: center;
-      color: #d26441;
+      color: $red-f;
     }
     &-currency {
       text-align: center;
       font-family: "Roboto Condensed", sans-serif;
-      font-size: 14px;
+      font-size: $fs-s;
     }
   }
 }

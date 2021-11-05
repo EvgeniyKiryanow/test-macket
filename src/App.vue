@@ -16,15 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-size: 10px;
-  box-sizing: border-box;
-}
-#app {
-  overflow-x: hidden;
-}
+  #app {
+    overflow-x: hidden;
+  }
 </style>

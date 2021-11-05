@@ -91,26 +91,22 @@ export default {
       padding: 10px;
     }
     &-title {
-      font-family: "Roboto Condensed", sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 25px;
-      color: #4d4545;
+      @include fontBold;
+      font-size: $fs-m;
+      color: $brown;
       margin: 0;
     }
     &-comprasion {
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 100;
       text-transform: uppercase;
-      font-size: 11px;
-      color: #a7a9ac;
+      font-size: 1.1em;
+      color: $w-grey;
     }
     &-persent {
-      font-family: "Roboto Condensed", sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 25px;
-      color: #c49a6c;
+     @include fontBold;
+      font-size: $fs-m;
+      color: $gold;
     }
   }
   &__footer {
@@ -123,32 +119,26 @@ export default {
       width: 40%;
       text-align: right;
       word-wrap: break-word;
-      color: black;
+      color: $black;
       font-family: "Roboto Condensed", sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 0;
-      font-size: 14px;
+      line-height: 1;
+      padding-top: 15px;
+      font-size: $fs-s;
     }
     &-more {
       width: 53%;
       margin-left: 5%;
       p {
-        color: #25383f;
-        font-family: "Roboto Condensed", sans-serif;
-        font-weight: 600;
-        font-size: 50px;
-        padding: 0;
-        margin: 0;
+        color: $dark-blue;
+        @include fontBold;
+        font-size: $fs-b;
       }
       button {
-        background: white;
-        border: 5px solid black;
-        font-family: "Roboto Condensed", sans-serif;
-        font-weight: 600;
-        font-size: 23px;
+        background: $white;
+        border: 5px solid $black;
+        @include fontBold;
+        font-size: $fs-m;
         padding: 15px;
-        cursor: pointer;
       }
     }
   }

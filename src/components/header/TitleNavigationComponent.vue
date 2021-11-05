@@ -23,40 +23,51 @@ export default {
   align-items: center;
   display: flex;
   &__items {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: $shadow;
     width: 80%;
-    display: flex;
-    align-items: center;
+    display: inherit;
+    align-items: inherit;
     justify-content: space-evenly;
-    background: white;
+    background: $white;
     padding: 20px;
-    list-style: none;
   }
   &__item {
     a {
-      text-decoration: unset;
-      color: #6d6e71;
-      font-size: 14px;
-      font-family: "Roboto Condensed", sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
+      position: relative;
+      color: black;
+      @include NavFont($grey);
+      &:after {
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: 0;
+        background-image: url("../../../src/assets/arrow.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+      }
     }
   }
   &__button {
-    background: linear-gradient(
-      rgba(82, 168, 40, 1) 0%,
-      rgba(117, 92, 30, 1) 100%
-    );
-    padding: 20px;
+    position: relative;
+    background: linear-gradient($gradient);
+    padding: 22px;
     width: 20%;
     border: unset;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    color: white;
-    font-size: 14px;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
+    box-shadow: $shadow;
+    @include NavFont($white);
+    &:before {
+      position: absolute;
+      content: "";
+      left: 15%;
+      top: 27%;
+      background-image: url("../../../src/assets/basket.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 25px;
+      height: 25px;
+    }
   }
 }
 </style>

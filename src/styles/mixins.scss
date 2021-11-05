@@ -1,0 +1,27 @@
+@mixin wrapper {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+@mixin paddings {
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        padding-left: #{$i * 1}em;
+      }
+    }
+  }
+@mixin fontBold {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+@mixin NavFont($color) {
+    color: $color;
+    font-size: $fs-s;
+    @include fontBold;
+}
+@mixin TitleSlider {
+    color: $white;
+    font-size: $fs-b;
+    font-family: "Roboto Condensed", sans-serif;
+}
