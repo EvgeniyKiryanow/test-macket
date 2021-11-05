@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <VueSlickCarousel class="header__carousel" :autoplay="false">
+    <VueSlickCarousel class="header__carousel" :autoplaySpeed="1000" :autoplay="true">
       <div class="header__carousel--item">
         <img
           class="header__carousel-slider-img"
@@ -21,29 +21,13 @@
           src="../../../src/assets/title.jpeg"
           alt=""
         />
-        <h2 class="header__carousel--title">
-          Органическое нано-удобние добриво
-        </h2>
-      </div>
-      <div class="header__carousel--item">
-        <img
-          class="header__carousel-slider-img"
-          src="../../../src/assets/title.jpeg"
-          alt=""
-        />
-        <h2 class="header__carousel--title">
-          Органическое нано-удобние добриво
-        </h2>
-      </div>
-      <div class="header__carousel--item">
-        <img
-          class="header__carousel-slider-img"
-          src="../../../src/assets/title.jpeg"
-          alt=""
-        />
-        <h2 class="header__carousel--title">
-          Органическое нано-удобние добриво
-        </h2>
+        <div class="header__carousel--wrapper">
+          <h2 class="header__carousel--title">
+            <p>Органическое</p>
+            <p>нано-удобние</p>
+            <p>добриво</p>
+          </h2>
+        </div>
       </div>
     </VueSlickCarousel>
     <div class="header__navigations">
