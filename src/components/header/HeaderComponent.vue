@@ -1,112 +1,133 @@
 <template>
-    <header class="header">
+  <header class="header">
     <VueSlickCarousel class="header__carousel" :autoplay="false">
       <div class="header__carousel--item">
-            <img class='header__carousel-slider-img' src="../../../src/assets/title.jpeg" alt="">
-            <div class="header__carousel--wrapper">
-                <h2 class="header__carousel--title">
-                    <p>Органическое</p>
-                    <p>нано-удобние</p>
-                    <p>добриво</p>
-                </h2>
-            </div>
+        <img
+          class="header__carousel-slider-img"
+          src="../../../src/assets/title.jpeg"
+          alt=""
+        />
+        <div class="header__carousel--wrapper">
+          <h2 class="header__carousel--title">
+            <p>Органическое</p>
+            <p>нано-удобние</p>
+            <p>добриво</p>
+          </h2>
+        </div>
       </div>
       <div class="header__carousel--item">
-          <img class='header__carousel-slider-img' src="../../../src/assets/title.jpeg" alt="">
-          <h2 class="header__carousel--title" >Органическое нано-удобние добриво</h2>
+        <img
+          class="header__carousel-slider-img"
+          src="../../../src/assets/title.jpeg"
+          alt=""
+        />
+        <h2 class="header__carousel--title">
+          Органическое нано-удобние добриво
+        </h2>
       </div>
       <div class="header__carousel--item">
-          <img class='header__carousel-slider-img' src="../../../src/assets/title.jpeg" alt="">
-          <h2 class="header__carousel--title" >Органическое нано-удобние добриво</h2>
+        <img
+          class="header__carousel-slider-img"
+          src="../../../src/assets/title.jpeg"
+          alt=""
+        />
+        <h2 class="header__carousel--title">
+          Органическое нано-удобние добриво
+        </h2>
       </div>
       <div class="header__carousel--item">
-          <img class='header__carousel-slider-img' src="../../../src/assets/title.jpeg" alt="">
-          <h2 class="header__carousel--title" >Органическое нано-удобние добриво</h2>
+        <img
+          class="header__carousel-slider-img"
+          src="../../../src/assets/title.jpeg"
+          alt=""
+        />
+        <h2 class="header__carousel--title">
+          Органическое нано-удобние добриво
+        </h2>
       </div>
     </VueSlickCarousel>
     <div class="header__navigations">
-        <div class="header__navigations--wrapper">
-            <NavBar />
-            <TitleNavBar />
-        </div>
+      <div class="header__navigations--wrapper">
+        <NavBar />
+        <TitleNavBar />
+      </div>
     </div>
-    </header>
+  </header>
 </template>
 
 <script>
-import NavBar from './NavigationComponent.vue'
-import TitleNavBar from './TitleNavigationComponent.vue'
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import NavBar from "./NavigationComponent.vue";
+import TitleNavBar from "./TitleNavigationComponent.vue";
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   name: "Header",
-  components: { NavBar, TitleNavBar, VueSlickCarousel }
+  components: { NavBar, TitleNavBar, VueSlickCarousel },
 };
-
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:ital,wght@1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:ital,wght@1,900&display=swap");
 @mixin paddings {
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) {
-      padding-left:#{$i * 1}em;
+      padding-left: #{$i * 1}em;
     }
   }
 }
-    .header {
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        &__navigations {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding-top: 50px;
-        }
-        &__navigations--wrapper {
-            width: 1024px;
-            margin: 0 auto;
-            max-width: 1024px;
-            width: 100%;
-        }
-        &__carousel-slider-img {
-            width: 100%;
-            height: 650px;
-        }
-        &__carousel--wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            max-width: 1024px;
-            width: 100%;
-            margin: 0 auto
-        }
-        &__carousel--item {
-            position: relative;
-        }
-        &__carousel--title {
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            text-transform: uppercase;
-            word-wrap: break-word;
-            color: white;
-            font-size: 5rem;
-            font-family: 'Roboto Condensed', sans-serif;
-            p{
-                @include paddings;
-                margin: 0;
-                padding: 0;
-            }
-        }
-        &__carousel {
-            position: absolute;
-            height: 650px;
-        }
+.header {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  &__navigations {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 50px;
+  }
+  &__navigations--wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+  }
+  &__carousel-slider-img {
+    width: 100%;
+    height: 650px;
+  }
+  &__carousel--wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__carousel--item {
+    position: relative;
+  }
+  &__carousel--title {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    color: white;
+    font-size: 5rem;
+    font-family: "Roboto Condensed", sans-serif;
+    p {
+      @include paddings;
+      margin: 0;
+      padding: 0;
     }
+  }
+  &__carousel {
+    position: absolute;
+    height: 650px;
+  }
+}
 </style>
