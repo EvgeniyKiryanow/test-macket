@@ -1,14 +1,14 @@
 <template>
-  <nav class="nav">
-    <ul class="nav__items">
-      <li class="nav__item"><a href="#">Нагро-Удобрение</a></li>
-      <li class="nav__item"><a href="#">Биодизель</a></li>
-      <li class="nav__item"><a href="#">Силко</a></li>
-      <li class="nav__item"><a href="#">Интеренет-магазин</a></li>
-      <li class="nav__item"><a href="#">Вопросы-ответы</a></li>
-      <li class="nav__item"><a href="#">Контакты</a></li>
+  <nav class="nav-title">
+    <ul class="nav-title__items">
+      <li class="nav-title__item"><a href="#">Нагро-Удобрение</a></li>
+      <li class="nav-title__item"><a href="#">Биодизель</a></li>
+      <li class="nav-title__item"><a href="#">Силко</a></li>
+      <li class="nav-title__item"><a href="#">Интеренет-магазин</a></li>
+      <li class="nav-title__item"><a href="#">Вопросы-ответы</a></li>
+      <li class="nav-title__item"><a href="#">Контакты</a></li>
     </ul>
-    <button class="nav__button">Корзина</button>
+    <button class="nav-title__button">Корзина</button>
   </nav>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav {
+.nav-title {
   align-items: center;
   display: flex;
   &__items {
@@ -34,8 +34,8 @@ export default {
   &__item {
     a {
       position: relative;
-      color: black;
       @include NavFont($grey);
+      @include hover;
       &:after {
         content: "";
         position: absolute;
@@ -57,6 +57,7 @@ export default {
     border: unset;
     box-shadow: $shadow;
     @include NavFont($white);
+    @include hover;
     &:before {
       position: absolute;
       content: "";

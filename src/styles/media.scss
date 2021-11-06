@@ -1,0 +1,63 @@
+@media (max-width: 970px) {
+    html {
+        font-size: 8px !important;
+    }
+}
+@media (max-width: 770px) {
+   body {
+    #app {
+        .header {
+            img {
+                object-fit: cover;
+            }
+            &__carousel--title {
+                left: 20%;
+            }
+            .nav {
+                &__title {
+                    width: 20%;
+                }
+                &__items {
+                    width: 70%;
+                }
+            }
+            .nav-title {
+                display: block;
+                &__items {
+                    width: 20%;
+                }
+                &__button {
+                    &:before {
+                        display: none;
+                    }
+                }
+                &__item {
+                    padding: 5px 0;
+                    a {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .main {
+            background: unset;
+            &__wrapper {
+                display: block;
+            }
+            &__benefit {
+                width: 100%;
+            }
+            &__calculate-form {
+                width: 100%;
+                .form {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+   }
+}

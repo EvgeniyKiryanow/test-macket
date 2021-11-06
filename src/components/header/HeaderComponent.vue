@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <VueSlickCarousel class="header__carousel" :autoplaySpeed="1000" :autoplay="true">
+    <VueSlickCarousel class="header__carousel" :autoplaySpeed="2000" :autoplay="true">
       <div class="header__carousel--item">
         <img
           class="header__carousel-slider-img"

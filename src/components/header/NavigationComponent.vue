@@ -27,20 +27,17 @@ export default {
   justify-content: space-between;
   &__select {
     background: transparent;
-    border-color: white;
-    color: white;
+    border-color: $white;
+    color: $white;
     outline: unset;
     padding: 1px;
-    text-transform: uppercase;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: 600;
+   @include fontBold;
   }
   &__title {
     width: 50%;
-    color: white;
+    color: $white;
     font-size: 5em;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: 600;
+    @include fontBold;
     margin: 0;
   }
   &__items {
@@ -50,9 +47,10 @@ export default {
     justify-content: space-between;
     list-style: none;
     a {
+     @include hover;
       text-decoration: unset;
-      color: white;
-      font-size: 12px;
+      color: $white;
+      font-size: 1.2em;
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 100;
       text-transform: uppercase;
